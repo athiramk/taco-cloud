@@ -35,6 +35,9 @@ public class OrderController {
 
     log.info("Order submitted: {}", order);
     sessionStatus.setComplete();
+    /*By calling setComplete(), we are ensuring that the session is cleaned up 
+     * and ready for a new order the next time the user creates a taco.
+     */
 
     return "redirect:/";
   }
